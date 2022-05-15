@@ -27,8 +27,6 @@ jobs:
       
       - name: workspace change
         run: |
-              terraform workspace new test
-              terraform workspace new prod
               terraform workspace select prod 
         continue-on-error: true
  
