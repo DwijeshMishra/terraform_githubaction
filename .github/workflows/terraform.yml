@@ -27,8 +27,10 @@ jobs:
       
       - name: workspace change
         run: |
+              terraform workspace new test
               terraform workspace new dev
-              terraform workspace select dev 
+              terraform workspace new prod
+              terraform workspace select prod 
  
       # Generates an execution plan for Terraform
       - name: Terraform Plan
