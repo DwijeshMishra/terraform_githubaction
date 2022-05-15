@@ -20,7 +20,12 @@ jobs:
       - uses: actions/checkout@v2
 
       - uses: hashicorp/setup-terraform@v1
-    
+       
+      - name: workspace change
+        run: |
+              terraform workspace new dev
+              terraform workspace select dev 
+
       - name: Terraform Init
         id: init
         run: terraform init 
